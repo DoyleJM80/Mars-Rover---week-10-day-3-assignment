@@ -8,8 +8,8 @@ export default class ImageDisplay extends Component {
     let image = this.props.image;
     return(
       <div>
-        <div>
-          {image.img_src}
+        <div className="card">
+          <img src={image.img_src}/>
         </div>
       </div>
 

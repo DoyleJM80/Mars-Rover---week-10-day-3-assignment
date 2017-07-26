@@ -59,7 +59,9 @@ export default class GetImageForm extends Component {
           <input type="number" onChange={this.handleChange} name="sol" max="2000" min="1000" value={this.state.sol} />
         </form>
         <GetImageButton handleSubmit={this.handleSubmit}/>
-        {images}
+        <div className="flex">
+          {images}
+        </div>
       </div>
     );
   };
