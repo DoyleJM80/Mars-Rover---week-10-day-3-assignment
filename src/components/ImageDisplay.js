@@ -5,7 +5,13 @@ export default class ImageDisplay extends Component {
     super();
   };
   render() {
+    let image = this.props.image;
     return(
+      <div>
+        <div>
+          {image.img_src}
+        </div>
+      </div>
 
     );
   };
