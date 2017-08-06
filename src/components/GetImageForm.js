@@ -8,9 +8,9 @@ export default class GetImageForm extends Component {
     super();
     this.state = {
       images: [],
-      rover: 'Curiosity',
+      rover: 'Spirit',
       camera: 'navcam',
-      sol: '1000'
+      sol: '1010'
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,7 +20,6 @@ export default class GetImageForm extends Component {
     let object = {};
     object[event.target.name] = event.target.value;
     this.setState(object)
-    // this.setState(object)
   }
 
   handleSubmit(event) {
