@@ -24,7 +24,8 @@ export default class GetImageForm extends Component {
 
   handleSubmit(event) {
     let imageUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${this.state.rover}/photos?sol=${this.state.sol}&camera=${this.state.camera}&api_key=${Key}`;
-    fetch(imageUrl).then((result) => {
+    let headers = {};
+    fetch(imageUrl, headers).then((result) => {
       result.json().then((response) => {
         console.log('one',response);
       this.setState({
@@ -40,7 +41,7 @@ export default class GetImageForm extends Component {
     });
 
     return(
-      <div>
+      <div className="form-container">
         <form>
           <label htmlFor="rover">Rover</label>
             <select onChange={this.handleChange} name="rover" value={this.state.rover}>
